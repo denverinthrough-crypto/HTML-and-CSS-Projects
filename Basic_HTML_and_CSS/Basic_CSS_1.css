@@ -1,0 +1,46 @@
+
+
+   p {
+	color: green;
+	text-align: left;
+	
+   }
+   
+   .My_Style {
+	   background-color: red;
+	   color: blue;
+	   text-decoration: underline;
+	   font-weight: bold;
+	   font-size: small;
+	   text-aling: center;
+   }
+
+	table {
+	border: 5px solid silver;
+	}
+	
+	td:hover {
+		background-color: yellow;
+		color: black;
+		
+	}
+	
+	tr, th {
+		background-color: black;
+		color: cornsilk;
+		
+	}
+	
+	tr, td {
+		background-color: blue;
+		color: pink;
+		
+	}
+	
+	ol {
+		list-style-type: upper-roman;
+	}
+	
+	ul {
+		list-style-type: circle;
+	}
