@@ -1,0 +1,112 @@
+/* Neon style for section titles */
+#gallery h2 {
+  font-family: 'Orbitron', sans-serif; /* Futuristic bold font */
+  font-size: 42px; /* Big and bold */
+  text-align: center;
+  color: #ff004f; /* Neon pink/red */
+  text-shadow: 
+    0 0 5px #ff004f, 
+    0 0 10px #ff004f, 
+    0 0 20px #ff69b4, 
+    0 0 30px #ff69b4, 
+    0 0 40px #ff004f; /* Neon glow effect */
+  margin-bottom: 30px;
+  transition: all 0.3s ease;
+}
+
+/* Optional: glow on hover for extra effect */
+#gallery h2:hover {
+  color: #ff69b4;
+  text-shadow: 
+    0 0 10px #ff004f, 
+    0 0 20px #ff004f, 
+    0 0 40px #ff69b4, 
+    0 0 60px #ff69b4;
+  transform: scale(1.05);
+}
+
+
+
+/* body */
+body {
+  font-family: Arial, sans-serif;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+
+  /* Neon gradient animated background */
+  background: linear-gradient(-45deg, #ff004f, #ff69b4, #1f1f1f, #000);
+  background-size: 400% 400%;
+  animation: neonGradient 20s ease infinite;
+
+  /* Optional: subtle overlay glow */
+  position: relative;
+}
+
+@keyframes neonGradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Optional: subtle animated particles overlay */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('Img/particles.png') repeat;
+  opacity: 0.1;
+  pointer-events: none;
+  animation: moveParticles 60s linear infinite;
+}
+
+@keyframes moveParticles {
+  0% { background-position: 0 0; }
+  100% { background-position: 1000px 1000px; }
+}
+
+
+
+/* Gallery Grid */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Gallery Item */
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border: 3px solid #ff004f;
+  border-radius: 10px;
+  box-shadow: 0 0 15px #ff004f;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+  aspect-ratio: 1/1; /* Makes all gallery items square */
+}
+
+/* Make images cover the container */
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* crops or scales image to fill the square */
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+/* Hover effect */
+.gallery-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px #ff004f, 0 0 50px #ff69b4;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.1);
+}
