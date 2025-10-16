@@ -1,0 +1,68 @@
+body {
+    background-color: rgb(153, 194, 192);
+}
+
+h1 {
+    text-align: center;
+    font-size: 50px;
+    font-family: Palatino Linotype, serif;
+    font-weight: 800;
+    font-stretch: expanded;
+    text-shadow: 2px 2px 2px #000, -1px -1px 0 #d6e4e656;
+    color: black;
+}
+
+h1.neon:hover {
+    color: #127f8d; /* neon green */
+    text-shadow:
+        0 0 5px #127f8d,
+        0 0 10px #127f8d,
+        0 0 20px #127f8d,
+        0 0 40px #127f8d,
+        0 0 80px #127f8d;
+    cursor: pointer;
+}
+
+/* Navbar */
+
+.navbar-container {
+    background-color: #333;   /* navbar background */
+    padding: 10px 0;          /* top/bottom padding */
+    display: flex;            /* enable flexbox */
+    justify-content: center;  /* center the nav horizontally */
+    border-style: inset;
+    border-color:hsl(175, 23%, 72%);
+    border-radius: 15px;
+    margin-left: 10%;
+    margin-right: 10%;
+    transition: background-color 0.5s, opacity 0.5s; /* smooth transition */
+}
+
+.navbar-container:hover {
+    background-color: hsl(195, 23%, 17%); /* slightly lighter on hover */
+    opacity: 0.9;           /* optional fade effect */
+}
+
+nav {
+    display: flex;            /* horizontal layout for links */
+    gap: 30px;                /* space between links */
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-family: Arial, sans-serif;
+    font-weight: 600;
+    transition: color 0.4s, transform 0.3s; /* smooth fade & scale */
+   
+}
+
+nav a:hover {
+    color: #ff9800;
+    transform: scale(1.1);
+}
+
+nav a.active {
+    border-bottom: 2px solid #ff9800;
+}
