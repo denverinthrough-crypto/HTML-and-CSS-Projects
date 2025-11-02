@@ -4,76 +4,87 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>One Page Website</title>
+    <link rel="stylesheet" href="css/onepage.css">
 </head>
 <body>
 
-    <!-- Navigation with Bookmarks -->
-    <nav>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#gallery">Gallery</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li><a href="#video">Video</a></li>
-            <li><a href="#footer">Footer</a></li>
-        </ul>
-    </nav>
+    <!-- NAVIGATION -->
+<nav>
+  <ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#gallery">Gallery</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#video">Video</a></li>
+    <li><a href="#footer">Footer</a></li>
+  </ul>
+</nav>
 
-    <!-- Home Section -->
-    <section id="home">
-        <h1>Welcome to My One Page Website</h1>
-        <p>This is the home section. It introduces the content of the page.</p>
-    </section>
+<!-- HOME -->
+<section id="home">
+  <h1>The Two-Time Champion</h1>
+  <p>Welcome to the arena of violence, speed, and momentum. Step into the world of the Doc — where dominance meets style.</p>
+</section>
 
-    <hr>
+<hr>
 
-    <!-- Gallery Section -->
-    <section id="gallery">
-        <h2>Gallery</h2>
-        <p>Here are some pictures:</p>
-        <img src="https://via.placeholder.com/200" alt="Sample Image 1">
-        <img src="https://via.placeholder.com/200" alt="Sample Image 2">
-        <img src="https://via.placeholder.com/200" alt="Sample Image 3">
-    </section>
+<!-- GALLERY -->
+<section id="gallery">
+  <h2>The Gallery of Violence</h2>
+  <p>Click to open in full glory:</p>
+  <img src="https://i.imgur.com/qQ8K9KX.jpeg" alt="Doc Profile" onclick="openLightbox(this)">
+  <img src="https://i.imgur.com/BZbrZHe.jpeg" alt="Champion’s Arena" onclick="openLightbox(this)">
+  <img src="https://i.imgur.com/Jqug9wv.jpeg" alt="Violence. Speed. Momentum." onclick="openLightbox(this)">
+</section>
 
-    <hr>
+<!-- LIGHTBOX -->
+<div id="lightbox" class="lightbox" onclick="closeLightbox()">
+  <span class="close" onclick="closeLightbox()">&times;</span>
+  <img class="lightbox-content" id="lightboxImg">
+  <div class="lightbox-caption" id="lightboxCaption"></div>
+</div>
 
-    <!-- Contact Section -->
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <form>
-            <label for="name">Name:</label><br>
-            <input type="text" id="name" name="name" placeholder="Enter your name"><br><br>
+<hr>
 
-            <label for="email">Email:</label><br>
-            <input type="email" id="email" name="email" placeholder="Enter your email"><br><br>
+<!-- CONTACT -->
+<section id="contact">
+  <h2>Contact the Doc</h2>
+  <form>
+    <label for="name">Name:</label><br>
+    <input type="text" id="name" placeholder="Champion Name"><br>
 
-            <label for="message">Message:</label><br>
-            <textarea id="message" name="message" rows="4" cols="30" placeholder="Your message here"></textarea><br><br>
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" placeholder="TwoTime@champ.com"><br>
 
-            <input type="submit" value="Send">
-        </form>
-    </section>
+    <label for="message">Message:</label><br>
+    <textarea id="message" rows="4" placeholder="What's your message, Champion?"></textarea><br>
 
-    <hr>
+    <input type="submit" value="Send Message">
+  </form>
+</section>
 
-    <!-- Video Section -->
-    <section id="video">
-        <h2>Watch a Video</h2>
-        <p>Here’s an embedded video:</p>
-        <iframe width="560" height="315" 
-                src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
-                title="YouTube video player" 
-                frameborder="0" 
-                allowfullscreen>
-        </iframe>
-    </section>
+<hr>
 
-    <hr>
+<!-- VIDEO -->
+<section id="video">
+  <h2>The Doc in Motion</h2>
+  <p>Pure violence. Pure speed. Pure momentum.</p>
+  <iframe width="560" height="315" 
+    src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+    title="YouTube video player" 
+    frameborder="0" 
+    allowfullscreen>
+  </iframe>
+</section>
 
-    <!-- Footer -->
-    <footer id="footer">
-        <p>&copy; 2025 My One Page Website. All rights reserved.</p>
-    </footer>
+<hr>
 
+<!-- FOOTER -->
+<footer id="footer">
+  <p>&copy; 2025 The Two-Time. Violence. Speed. Momentum.</p>
+</footer>
+
+
+
+    <script src="js/onepagejs.js"></script>
 </body>
 </html>
