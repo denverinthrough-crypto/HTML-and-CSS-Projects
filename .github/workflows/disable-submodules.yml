@@ -1,0 +1,17 @@
+name: Prevent Submodule Errors
+
+on:
+  push:
+    branches:
+      - main
+      - github-assignment  # include any branch you are working on
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: false  # ✅ disables fetching submodules
+      - run: echo "Checked out repo without submodules"
+
