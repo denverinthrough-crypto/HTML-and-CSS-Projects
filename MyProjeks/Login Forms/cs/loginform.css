@@ -1,0 +1,298 @@
+body {
+    background-color: hsl(217, 12%, 38%);
+}
+
+.login-container {
+    background: hsla(192, 41%, 61%, 0.356);
+    border-radius: 15px;
+    padding-bottom: 5%;
+    padding-left: 50px;
+    padding-right: 50px;
+    width: 30%;
+    margin: auto;
+    margin-top: 150px;
+    
+}
+
+
+h2 {
+    text-align: center;
+    padding-top: 40px;
+    margin: 0 auto;
+    width: 80%;
+    display: block;
+    color:blanchedalmond;
+    font-size: 4vw;
+    font-family: Georgia, serif;
+    cursor: pointer;
+}
+
+.hover-underline {
+    text-decoration: none; 
+    transition: transform 0.5s ease, border-color 0.03s ease, color 0.03s ease; /* smooth effect */
+       
+    
+}
+
+.hover-underline:hover {
+    text-decoration: underline;
+    transform: scale(1.1); /* grows 10% */
+    color: blanchedalmond;            
+}
+
+.form-container {
+    text-align: left;
+    padding-top: 45px;
+    
+}
+
+/* EMAIL */
+
+.form-group-email{
+    padding-bottom: 50px;
+    width: 90%;          /* relative to screen size */
+    max-width: 500px;    /* optional, stops stretching too far */
+    margin: 0 auto;      /* centers the container */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;           /* space between label and input */
+
+}
+
+.email {
+    font-size: 2vw;
+    font-family: Georgia, serif;
+    color:blanchedalmond;
+        
+}
+
+input[type="text"] {
+  border: none;              /* remove box border */
+  border-bottom: 2px solid #ccc;   /* add underline */
+  background: transparent;         /* remove background */
+  padding: 2px 2px;                /* space for text */
+  font-size: 16px;                 /* font size */
+  width: 100%;
+  max-width: 400px;                    /* width */
+  transition: border-color 0.3s;   /* smooth focus effect */
+  caret-color: #ccc; /* 💡 change the blinking cursor color */
+  color:#ccc;                  /* text color */
+}
+
+/* Change underline color on focus */
+input[type="text"]:focus {
+  border-bottom: 2px solid #ccc; /* blue underline when active */
+  outline: none;                    /* remove default outline */
+}
+
+/* Email */
+
+/* PASSWORD */
+
+.form-group-password{
+    padding-bottom: 50px;
+    width: 90%;          /* relative to screen size */
+    max-width: 500px;    /* optional, stops stretching too far */
+    margin: 0 auto;      /* centers the container */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;           /* space between label and input */
+
+}
+
+.password {
+    font-size: 2vw;
+    font-family: Georgia, serif;
+    color:blanchedalmond;
+}
+
+input[type="password"] {
+  border: none;                    /* remove box border */
+  border-bottom: 2px solid #ccc;   /* add underline */
+  background: transparent;         /* remove background */
+  padding: 2px 2px;                /* space for text */
+  font-size: 16px;                 /* font size */
+  width: 100%;                      /* width */
+  max-width: 400px;                    
+  transition: border-color 0.3s;   /* smooth focus effect */
+  caret-color: #ccc; /* 💡 change the blinking cursor color */
+  color:#ccc;                  /* text color */
+}
+
+/* Change underline color on focus */
+input[type="password"]:focus {
+  border-bottom: 2px solid #ccc; /* blue underline when active */
+  outline: none;                    /* remove default outline */
+}
+/* password */
+
+/* Remember Me checkbox */
+
+#Remember {
+  display: flex;
+  align-items: center;
+  margin-left: 3%;
+  gap: 0.5rem;
+  color: blanchedalmond;
+  font-size: clamp(0.8rem, 1vw + 0.5rem, 1rem); /* 👈 This makes text resize */
+  cursor: pointer;
+
+}
+
+/* FORGOT LINK */
+.forgot-link {
+    margin-left: auto;
+    margin-right: 6%;
+  color: blanchedalmond;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.forgot-link:hover {
+  color: blanchedalmond;
+  text-decoration: underline;
+
+}
+
+/* LOGIN */
+
+.text-box {
+   text-align: center;
+   font-size: 1vw;
+   display: flex;
+   margin-left: 3%;
+   margin-top: 8%;
+   
+}
+
+.btn:link,
+.btn:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 15px 40px;
+    display: inline-block;
+    border-radius: 100px;
+    transition: all .2s;
+    position: absolute;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-white {
+    background-color: #fff;
+    color: #777;
+}
+
+.btn::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s;
+}
+
+.btn-white::after {
+    background-color: #fff;
+}
+
+.btn:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+}
+
+.btn-animated {
+    animation: moveInBottom 5s ease-out;
+    animation-fill-mode: backwards;
+}
+
+@keyframes moveInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+/* OR SEPARATOR */
+
+#separator {
+    margin-top: 100px;
+}
+
+.Or {
+    color: hsl(210, 19%, 92%);
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    font-size: clamp(14px, 2vw, 20px);
+     
+}
+
+
+
+/* OTHER LOGIN OPTIONS */
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: clamp(15px, 2vw, 30px); /* responsive spacing between icons */
+    margin-top: 80px;
+}
+
+.social-icons a {
+  text-decoration: none;
+  font-size: clamp(1.2rem, 2vw + 0.5rem, 3rem);
+  color: hsl(203, 49%, 33%);
+  transition: color 0.3s, transform 0.3s;
+}
+
+.social-icons a:hover {
+  transform: scale(1.2);
+}
+
+/* Optional: custom colors per icon */
+.facebook:hover {
+  color: #1877f2; /* Facebook blue */
+}
+
+.gmail:hover {
+  color: #d93025; /* Gmail red */
+}
+
+.instagram:hover {
+  color: #e4405f; /* Instagram pink */
+}
+
+/* TOGGLE-PASSWORD SHOW/HIDE */
+
+/* Style the Show/Hide text */
+.toggle-password {
+    color: blanchedalmond;           /* Change text color */
+    font-weight: bold;         /* Optional: make it bold */
+    transition: color 0.3s;    /* Smooth color change on hover */
+    cursor: pointer;
+}
+
+.toggle-password:hover {
+    color: blanchedalmond;            /* Change color on hover */
+}
+
+
+
