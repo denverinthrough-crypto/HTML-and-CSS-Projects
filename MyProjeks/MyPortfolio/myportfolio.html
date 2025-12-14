@@ -3,72 +3,126 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Portfolio</title>
+  <title>Denver's Portfolio</title>
   <link rel="stylesheet" href="CSS/myportfolio.css">
 </head>
-<body>
+<body id="home">
 
   <!-- Header / Navigation -->
   <header>
     <div>
-        <nav>
-            <h1 class="logo">Denver</h1>
+        <nav class="navbar">
+            <h1 class="image-text">DENVERITO</h1>
                 <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#projects">Projects</a></li>
                     <li><a href="../../bootstrap4_project/gallery.html" target="_blank">Gallery</a></li>
-                    <li><a href="#github">GitHub</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
         </nav>
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <section id="hero">
-    <h2>Hi,  I'm Denver</h2>
-    <p>I'm a web developer creating modern and responsive websites.</p>
-    <a href="#projects" class="btn">See My Work</a>
-  </section>
+<!-- ABOUT -->
 
-  <!-- About Section -->
-  <section id="about">
-    <h2>About Me</h2>
-    <p>Write a short paragraph about yourself, your skills, and experience.</p>
-  </section>
-
-  <!-- Projects Section -->
-  <section id="projects">
-    <h2>My Projects</h2>
-    <div class="project-cards">
-      <!-- Project Card -->
-      <div class="card">
-        <h3>Project 1</h3>
-        <p>Short description of project.</p>
-      </div>
-      <div class="card">
-        <h3>Project 2</h3>
-        <p>Short description of project.</p>
-      </div>
-      <!-- Add more cards -->
+<section id="about" class="about-section">
+  <h1 class="about-title">About Me</h1>
+  <div class="about-content">
+    <img src="../MyPortfolio/images/me_1.jpg" alt="My Photo" class="about-img">
+    <div class="about-text">
+      <p>
+        Hi! I'm Denver, a passionate front-end web developer who loves creating modern, responsive, and visually engaging websites. I enjoy transforming ideas into interactive digital experiences using HTML, CSS, and JavaScript.
+      </p>
+      <p>
+        My goal is to continue learning and exploring new technologies that enhance user experience and design. When I’m not coding, I love exploring creative projects and continuously improving my craft.
+      </p>
     </div>
-  </section>
+  </div>
 
-  <!-- Contact Section -->
-  <section id="contact">
-    <h2>Contact Me</h2>
-    <form>
-      <input type="text" placeholder="Your Name" required>
-      <input type="email" placeholder="Your Email" required>
-      <textarea placeholder="Your Message" required></textarea>
-      <button type="submit">Send</button>
-    </form>
-  </section>
+  <!-- SOCIAL LINKS -->
 
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 Your Name. All rights reserved.</p>
-  </footer>
+  <div class="social-links">
+      <h3>You can find me here</h3>
+      <a href="https://www.instagram.com/emberrtzz/" target="_blank" class="social-icon">Instagram</a>
+      <a href="https://www.facebook.com/denverito/" target="_blank" class="social-icon">Facebook</a>
+      <a href="https://github.com/denverinthrough-crypto/HTML-and-CSS-Projects" target="_blank" class="social-icon">GitHub</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- MY PROJECTS -->
+<section class="project-container" id="projects">
+  <h1 class="myprojects">My Projects</h1>
+
+    <!-- PROJECTS 1, 2, 3, 4-->
+     
+    <div class="container">
+      <div class="project-card">
+        <h3>Login Form</h3>
+          <p>
+            A modern and responsive login form built with HTML, CSS, and JavaScript. The design focuses on simplicity and clean UI, featuring smooth transitions and well-structured layouts. JavaScript enhances the functionality by adding features like real-time form validation and password visibility toggle, ensuring a seamless user experience.
+          </p>
+            <a href="../Login Forms/login_form.html" target="_blank">
+              <button type="button" class="btn btn-primary btn-sm portfolio-btn">Click here</button>
+            </a>
+      </div>
+
+      
+      <div class="project-card">
+        <h3>To-Do List</h3>
+        <p>A sleek and interactive To-Do List web app. A sleek and interactive To-Do List web app. Add, complete, and delete tasks easily to stay organized. Built with HTML, CSS, and JavaScript for a responsive experience.</p>
+            <a href="../To-Do List/todolistHTML.html" target="_blank">
+              <button type="button" class="btn btn-primary btn-sm portfolio-btn">Click here</button>
+            </a>
+      </div>
+
+      
+
+      <div class="project-card">
+        <h3>Project 3</h3>
+        <p>Description of project 3 goes here.</p>
+      </div>
+
+      <div class="project-card">
+        <h3>Project 4</h3>
+        <p>Description of project 4 goes here.</p>
+      </div>
+    </div>
+</section>
+
+<!-- CONTACT -->
+
+<section id="contact" class="contact-section">
+  <div class="contact-container">
+    <h2>Contact Me</h2><br>
+
+    <p>Feel free to reach out! You can contact me via email, phone, or visit me in person.</p><br>
+
+    <div class="contact-info">
+      <div class="contact-item">
+        <strong>Email:</strong> <a href="mailto:yourname@example.com">denverinthrough@gmail.com</a>
+      </div>
+      <div class="contact-item">
+        <strong>Phone:</strong> <a href="tel:+1234567890">+1 234 567 890</a>
+      </div>
+      <div class="contact-item">
+        <strong>Based:</strong> Toronto, Ontario Canada
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+
+<footer class="footer">
+  <div class="footer-container">
+    <p>&copy; 2025 Denverito. All Rights Reserved.</p>
+    <p>Made with passion for web development.</p>
+  </div>
+</footer>
+
 
 </body>
 </html>

@@ -1,0 +1,458 @@
+html, body {
+    height: 100%;
+}
+
+body {
+    background-color: rgb(232, 209, 197);
+    background-attachment: fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+
+    color: #333; 
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--color-cream-light);
+}
+
+:root {
+    /* Define the variables needed by the About Us and Menu sections */
+    /* We'll use your NAVBAR's dark brown color for accents */
+    --color-dark-brown: rgb(69, 40, 41); /* Used for NAVBAR background and accent text */
+  
+    --color-cream-light: rgb(232, 209, 197); /* Your preferred body background color */
+    
+    /* We will use the dark brown for the menu list dots and item names for readability */
+    --color-accent-text: var(--color-dark-brown); 
+    --color-dot-leader: var(--color-dark-brown); 
+}
+
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    /* color and style */
+    background-color: rgb(69, 40, 41);
+    background-color: var(--color-dark-brown); /* Dark Brown background */
+    
+    /* spacing */
+    padding: 25px 50px;
+    
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    margin: 0;
+}
+
+/* Ensure the links within the NAV container are arranged horizontally */
+.navbar nav {
+    display: flex;
+    gap: 20px; /* Adds consistent space between links */
+    flex-wrap: wrap;
+}
+
+.nav-logo {
+    height: 200px;
+    width: auto;
+}
+
+.navbar a {
+    color: white;
+    font-weight: 800;
+    padding: 8px 15px;
+
+    font-size: 2rem;
+    text-decoration: none;
+    text-decoration-line: underline;
+    text-decoration-thickness: 3px;
+    text-decoration-color: transparent;
+    
+    /* transition */
+    transition: all 0.3s ease-in-out;
+
+    position: relative;
+    z-index: 1;
+
+}
+
+.navbar a:hover{
+    transform: scale(1.02);
+    text-decoration-color: white;
+
+}
+
+.navbar a::after {
+    content: '';
+    position: absolute;
+    bottom: 5px; /* Adjust this to move the line closer/further from the text */
+    
+    /* Start the line on the right edge */
+    right: 0; 
+    left: auto;
+    
+    /* Initial state: The line has 0 width (invisible) */
+    width: 0; 
+    
+    height: 3px; /* Thickness of the underline */
+    background-color: white; /* Color of the underline */
+    
+    /* Add transition for smoothness */
+    transition: width 0.3s ease-out; 
+    z-index: -1; /* Place the line behind the text */
+
+}
+
+/* ------------------------------------------------------------------ */
+/* --- A. ABOUT US SECTION --- */
+/* ------------------------------------------------------------------ */
+
+/* --- IMAGE CONTAINER (The circular frame) --- */
+.image-circle-container {
+    /* Fixed size for the circle */
+    width: 380px; 
+    height: 380px;
+    border-radius: 50%; 
+    
+    /* Optional: Add a subtle border to the circle */
+    border: 5px solid var(--color-orange); /* Orange border for the circle */
+    
+    /* Crucial: Hide anything that overflows */
+    overflow: hidden; 
+    
+    /* Position the container relative so we can adjust the image inside */
+    position: relative; 
+    
+    /* Optional: Add a subtle shadow to the circle for depth */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    
+    /* Space below the image */
+    margin-bottom: 30px; 
+
+    flex-shrink: 0;
+}
+
+.about-section { 
+    display: flex;
+    justify-content: center; /* Centers the content block */
+    align-items: center; /* Vertically centers the text and image */
+    max-width: 1100px; /* Gives the content plenty of room */
+    margin: 40px auto; /* Center the container on the page */
+    padding: 20px;
+    gap: 50px; /* Space between the image and the text */
+}
+
+/* --- IMAGE STYLING (The photo itself) --- */
+.claires-photo {
+    width: 100%; /* Make image fill the width of its container */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Remove extra space below image */
+    position: relative; 
+    top: -20px; 
+    object-fit: cover; 
+    
+   
+}
+
+/* --- ABOUT US PAGE LAYOUT --- */
+
+.about-bio-text {
+    padding: 30px;
+    flex-grow: 1; /* Allows the text box to take up the remaining space */
+
+    /* Text and Color */
+    color: #ffffff; 
+    font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif; 
+    text-align: left; 
+
+    color: var(--color-dark-brown);
+    
+   
+}
+
+/* Heading Styling */
+.about-bio-text h2 {
+    font-size: 2.5em; 
+    font-weight: 700;
+    margin-top: 0; 
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-bottom: 3px solid rgba(255, 255, 255, 0.5); 
+    text-align: left; 
+}
+
+/* Paragraph Styling */
+.about-bio-text p {
+    font-size: 1.1em; 
+    line-height: 1.8; 
+    margin-bottom: 20px;
+    text-align: justify; /* Using justify for a formal, block-like appearance */
+}
+
+
+@media (max-width: 768px) {
+    .about-section {
+        flex-direction: column; /* Stacks image on top of text */
+        gap: 20px; /* Reduce gap when stacked */
+        text-align: center;
+    }
+    
+    .about-bio-text {
+        /* Center text elements when stacked */
+        text-align: center;
+    }
+
+    .about-bio-text h2, 
+    .about-bio-text p {
+        text-align: center; /* Center header and paragraphs when stacked */
+    }
+}
+
+/*
+    Title Styling: "Special Kakanin"
+*/
+.menu-title {
+    /* Centering and Spacing */
+    max-width: 1200px; /* Match the max-width of your .kakanin-menu */
+    margin: 40px auto 10px; /* Top margin, center alignment, small bottom margin */
+    padding: 0 20px; /* Match horizontal padding of the menu */
+    text-align: center; /* Center the text */
+
+    /* Typography */
+    font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+    font-size: 3em; /* Very large and impactful */
+    font-weight: 800;
+    color: var(--color-dark-brown);
+    text-transform: uppercase;
+    letter-spacing: 4px; /* More space for a sophisticated look */
+    
+   
+}
+
+
+/*
+    1. Menu Container (Grid Layout)
+*/
+.kakanin-menu {
+    /* Set up a responsive grid for the cards */
+    display: grid;
+    /* Automatically fit as many cards as possible, minimum width 280px */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px; /* Space between the cards */
+    
+    max-width: 2000px;
+
+    margin: 0 auto;
+
+    padding: 40px 20px;
+
+}
+
+/*
+    2. Card Base Styling
+*/
+.kakanin-card {
+    /* Card appearance */
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 12px; /* Nicely rounded corners */
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    overflow: hidden; /* Important: Hides the description when it's off-screen */
+    position: relative; /* Essential for positioning the absolute dropdown */
+    text-align: center;
+    cursor: pointer; /* Indicates it's interactive */
+    
+    /* Smooth transition for all properties (shadow, transform) */
+    transition: all 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
+    
+    /* Subtle initial shadow */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    color: #333;
+}
+
+/* 3. Hover Effect: Lift and Deep Shadow 
+*/
+.kakanin-card:hover {
+    /* Lift the card up slightly */
+    transform: translateY(-8px); 
+
+    background: rgba(255, 255, 255, 0.4);
+    
+    /* Elegant box shadow for a professional 3D lift */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15), 
+                0 6px 10px rgba(0, 0, 0, 0.08);
+}
+
+/*
+    4. Image Styling
+*/
+.photo-kakanin {
+    width: 100%; /* Image fills the card width */
+    height: 250px; /* Fixed height for consistent card size */
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+    display: block;
+    /* Smooth transition for image (e.g., if you add a scale effect later) */
+    transition: transform 0.3s ease;
+}
+
+.kakanin-card strong {
+    /* Style for the Kakanin Name (initial view) */
+    display: block;
+    padding: 10px 0;
+    font-size: 1.8em;
+    font-weight: 700;
+    font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+    color: var(--color-dark-brown);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+/*
+    5. Description Dropdown Styling
+*/
+.description {
+    /* The description area that will slide up */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* Covers the entire card */
+    background: rgba(139, 69, 19, 0.95); /* Deep brown/caramel color with slight transparency */
+    color: white; 
+    padding: 20px;
+    text-align: left;
+    box-sizing: border-box; 
+
+
+    
+    /* Start the dropdown off-screen (below the card) */
+    transform: translateY(100%); 
+    
+    /* Smooth transition for the slide-in/out effect */
+    transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1); 
+    z-index: 10; 
+}
+
+.description h2 {
+    margin-top: 0;
+    font-size: 1.4em;
+    font-weight: 500;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+    padding-bottom: 10px;
+
+}
+
+.description p {
+    font-size: 0.9em;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+
+/*
+    6. The crucial trigger: Show the dropdown on card hover
+*/
+.kakanin-card:hover .description {
+    /* Slide the dropdown back into view (up 100% of its height) */
+    transform: translateY(0);
+}
+
+/* ------------------------------------------------------------------ */
+/* --- D. THREE-COLUMN MENU LIST (Kakanin, Ulam, Products) --- */
+/* ------------------------------------------------------------------ */
+
+.three-menu-categories {
+    max-width: 1200px;
+    margin: 60px auto 80px;
+    padding: 0 20px;
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px; 
+}
+
+
+
+.category-title {
+    font-size: 2.5em;
+    font-weight: 700;
+    color: var(--color-dark-brown);
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    text-align: left;
+    padding-bottom: 10px;
+    border-bottom: 3px solid var(--color-dark-brown);
+}
+
+.other-menu-list {
+    margin: 0; 
+}
+
+.menu-item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center; 
+    padding: 8px 0; 
+    
+    font-family: 'Georgia', serif; 
+    border-bottom: 1px dashed rgba(69, 40, 41, 0.3); /* Subtle separator */
+}
+
+/* Style for the Bullet Dot */
+.item-bullet {
+    display: block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: var(--color-dark-brown); 
+    margin-right: 15px; 
+    flex-shrink: 0;
+}
+
+.item-name {
+    font-size: 1.3em; 
+    font-weight: 500;
+    color: var(--color-dark-brown);
+    flex-grow: 1; 
+    padding-right: 0;
+    text-transform: capitalize; 
+}
+
+/* ------------------------------------------------------------------ */
+/* --- G. MENU ANNOUNCEMENT BANNER STYLES --- */
+/* ------------------------------------------------------------------ */
+
+.menu-announcement-banner {
+    max-width: 1200px;
+    margin: 40px auto 20px; /* Space above and below */
+    padding: 0 20px;
+    text-align: center;
+}
+
+.announcement-content {
+    background-color: #ffffff; /* White card background for high contrast */
+    border: 2px solid var(--color-dark-brown);
+    border-radius: 8px;
+    padding: 25px 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.menu-note {
+    font-size: 1.15em;
+    line-height: 1.6;
+    color: var(--color-dark-brown); /* Dark brown text for professional look */
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+.buffet-announcement {
+    font-size: 1.3em;
+    font-weight: 700;
+    color: var(--color-orange); /* Using the orange accent for a POP! */
+    padding: 10px 0;
+    border-top: 1px dashed rgba(69, 40, 41, 0.3); /* Separator line */
+    margin-top: 15px;
+}
