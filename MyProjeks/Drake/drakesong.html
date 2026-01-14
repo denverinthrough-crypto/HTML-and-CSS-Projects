@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Music Website</title>
+
+    <!-- CSS: Styles the page (colors, font, layout) -->
+    <style>
+        body {
+            background-color: #1e1e2f; /* Dark background color */
+            color: white;              /* Text color */
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        h1 {
+            color: #4da6ff; /* Blue heading color */
+        }
+
+        /* Animated box style */
+        #box {
+            width: 50px;
+            height: 50px;
+            background-color: red;
+            margin: 20px auto;
+            position: relative; /* Required for animation */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Page heading -->
+    <h1>My Favorite Song 🎵</h1>
+    <h2>Drake – What Did I Miss?</h2>
+
+    <!-- Embedded YouTube music video -->
+    <iframe width="560" height="315"
+        src="https://www.youtube.com/embed/weU76DGHKU0"
+        title="YouTube video player"
+        frameborder="0"
+        allowfullscreen>
+    </iframe>
+
+    <!-- Animation section -->
+    <h2>Simple Animation</h2>
+
+    <!-- Button triggers JavaScript animation -->
+    <button onclick="moveBox()">Animate</button>
+
+    <!-- Box that will move when button is clicked -->
+    <div id="box"></div>
+
+    <!-- JavaScript: Handles animation logic -->
+    <script>
+        let position = 0; // Keeps track of box position
+
+        // Function moves the box to the right
+        function moveBox() {
+            let box = document.getElementById("box");
+            position += 20; // Move 20px each click
+            box.style.left = position + "px";
+        }
+    </script>
+
+</body>
+</html>
